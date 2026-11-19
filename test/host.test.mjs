@@ -386,6 +386,9 @@ test('delegation host runs a caller-delivery subagent and returns its final text
 })
 
 test('approval inbox queues, approves, denies, expires and scopes', async () => {
+  // ApprovalInbox timers are unref'd so a plugin process can exit; keep this
+  // short-lived test process alive until the 40ms timeout fires on Linux CI.
+  const keepAlive = setInterval(() => {}, 1_000)
   const inbox = new ApprovalInbox({ ttlMs: 40, maxPending: 2 })
   const first = inbox.request({ fromDeviceId: 'device-a', capability: 'run', tool: 'pwsh', reason: 'needs shell' })
   const second = inbox.request({ fromDeviceId: 'device-a', capability: 'read' })
@@ -402,6 +405,7 @@ test('approval inbox queues, approves, denies, expires and scopes', async () => 
   assert.equal(expired.approved, false)
   assert.equal(expired.reason, 'approval-timeout')
   assert.equal(inbox.list().length, 0)
+  clearInterval(keepAlive)
   inbox.close()
   assert.equal((await inbox.request({ fromDeviceId: 'x', capability: 'read' })).reason, 'inbox-closed')
 })
