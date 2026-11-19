@@ -1,8 +1,9 @@
 import { readFileSync } from 'node:fs'
 import { createRequire } from 'node:module'
+import { fileURLToPath } from 'node:url'
 import vm from 'node:vm'
 
-const source = readFileSync('C:/Users/PS/.dsh/plugins/dsh-device-fleet/client.js', 'utf8')
+const source = readFileSync(fileURLToPath(new URL('../client.js', import.meta.url)), 'utf8')
 let captured = null
 let hostFetch = null
 const sandbox = {
