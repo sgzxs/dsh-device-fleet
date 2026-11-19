@@ -15,7 +15,7 @@ DeepSeek Harness 的设备联邦插件：把登录同一账号、且都安装本
 
 ## 安装
 
-已正式发布到 npm：**`dsh-device-fleet@1.20.8`（`latest` 与 `dev` 均指向 1.20.8）**。离线包 **`dsh-device-fleet-1.20.8.tgz`** 也在本目录。
+已正式发布到 npm：**`dsh-device-fleet@1.20.8`（`latest` 与 `dev` 均指向 1.20.8）**。离线包 **`dsh-device-fleet-1.20.8.tgz`** 也在本目录；GitHub Release：[v1.20.8](https://github.com/sgzxs/dsh-device-fleet/releases/tag/v1.20.8)。
 
 ```sh
 # npm 安装（A/B 两端必须同一版本）

@@ -1092,4 +1092,5 @@ dsh plugin --profile desktop add dsh-device-fleet@dev
 - 同步 README/AGENT-GUIDE、发布记录、仓库元数据（repository/homepage/bugs）。
 - 修复 `scripts/client-smoke.mjs` 硬编码本机路径与审批超时测试的 Linux CI keepalive。
 - 运行时代码同 1.20.7；npm/GitHub 同版本发布。
+- 已发布 `dsh-device-fleet@1.20.8`（`latest` + `dev`，2026-11-19；离线包 `dsh-device-fleet-1.20.8.tgz`，shasum `fff786c2231f19d51e91e37874498377ce263f90`，1,200,728 bytes）；GitHub Release：`v1.20.8`。
 - 双端 1.15.2 验证：V152-BASELINE-OK；B 重连后 A authority 稳定 epoch11（无回摆）；任务负责人 host↔B 双向修改成功、非法 owner 被拒；配置 `notifications.timeoutMs` 5100 保存并回退 5000。

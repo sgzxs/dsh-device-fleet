@@ -1,6 +1,6 @@
 # 项目现状（唯一权威页）
 
-**版本：1.20.8（正式版，npm `latest` + `dev`）** · **更新：2026-11-19 15:35（Asia/Shanghai）** · 1.20.8 为文档/CI 补丁：同步 README/AGENT-GUIDE、仓库元数据，修复 GitHub CI 的 client-smoke 路径与审批超时测试 keepalive；运行时代码同 1.20.7。A/B 1.20.7 真机验证保留，net 50/50、host 75/75。
+**版本：1.20.8（正式版，npm `latest` + `dev`）** · **更新：2026-11-19 15:40（Asia/Shanghai）** · 1.20.8 为文档/CI 补丁：同步 README/AGENT-GUIDE、仓库元数据，修复 GitHub CI 的 client-smoke 路径与审批超时测试 keepalive；运行时代码同 1.20.7。GitHub Release `v1.20.8`，CI 成功。A/B 仍 1.20.7，升级 1.20.8 后 strict 版本一致。
 
 > 部署提醒：1.17.3 A/B 必须同版本；当前 **A 已 1.17.3，B 仍 1.17.2**（待安装 1.17.3 并重载插件）。升级 A/B 时都要重载插件；只有插件管理器不可用或 bundle/profile patch 变更才需要重启 DSH。
 
