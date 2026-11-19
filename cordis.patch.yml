@@ -1,0 +1,26 @@
+# dsh-device-fleet bundle patch 鈥?mounts the Host plugin. The settings below are
+# safe defaults; real values (relay address, allowed roots, execution cwd) are
+# meant to be edited in the profile or through the plugin settings page.
+- insert:
+    - id: device-fleet
+      name: 'dsh-device-fleet'
+      config:
+        deviceName: !!js process.env.DSH_DEVICE_NAME ?? 'device'
+        direct:
+          host: '0.0.0.0'
+          port: 0
+        discovery: true
+        policy:
+          allowedRoots: []
+          capabilities:
+            read: auto
+            list: auto
+            grep: auto
+            fetch: auto
+            run: ask
+            tool: auto
+          allowedTools: []
+        promptSection: true
+        autoApproveAsk: false
+
+
