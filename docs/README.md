@@ -1,6 +1,6 @@
 # dsh-device-fleet 文档索引
 
-**当前版本：1.20.7（正式版，npm `latest`）** · 现状、真机结果与待办见 [STATUS.md](./STATUS.md)；审计见 [SECURITY-AUDIT-1.20.1.md](./SECURITY-AUDIT-1.20.1.md)；发布记录见 [RELEASE.md](./RELEASE.md)。
+**当前版本：1.20.8（正式版，npm `latest`）** · 现状、真机结果与待办见 [STATUS.md](./STATUS.md)；审计见 [SECURITY-AUDIT-1.20.1.md](./SECURITY-AUDIT-1.20.1.md)；发布记录见 [RELEASE.md](./RELEASE.md)。
 
 这里是**文档唯一入口**：先按“我想做什么”查，再进权威页。项目介绍与安装看根 [README](../README.md)。
 

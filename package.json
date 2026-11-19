@@ -1,6 +1,6 @@
 {
   "name": "dsh-device-fleet",
-  "version": "1.20.7",
+  "version": "1.20.8",
   "description": "DeepSeek Harness device fleet: enroll devices, direct-call remote tools, shared Rooms with lazy-woken agents, and delegated subagents across devices.",
   "repository": {
     "type": "git",

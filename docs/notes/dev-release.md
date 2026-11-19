@@ -3,8 +3,8 @@
 > **历史发布流水（按时间追加）。** 当前版本与现状见 [STATUS.md](../STATUS.md)。早期 dev.4–dev.20 期间的若干条目沿用了 `0.1.0-dev.20` 标题前缀；版本对应关系以 npm 发布时间为准，本次不重写历史正文。
 
 - 包名：`dsh-device-fleet`
-- 起始版本：`0.1.0-dev.3`（2026-11-09）；当前版本：`1.20.7`（**正式发布**；现状看 [STATUS.md](../STATUS.md)）
-- dist-tag：`dev` → `1.20.7`，`latest` → `1.20.7`（也可用精确版本安装）
+- 起始版本：`0.1.0-dev.3`（2026-11-09）；当前版本：`1.20.8`（**正式发布**；现状看 [STATUS.md](../STATUS.md)）
+- dist-tag：`dev` → `1.20.8`，`latest` → `1.20.8`（也可用精确版本安装）
 - registry：<https://registry.npmjs.org/dsh-device-fleet>
 - 首个 tarball：<https://registry.npmjs.org/dsh-device-fleet/-/dsh-device-fleet-0.1.0-dev.3.tgz>
 - 首个离线包：`dsh-device-fleet-0.1.0-dev.3.tgz`（历史文件；当前正式离线包为 1.20.7）
@@ -1086,4 +1086,10 @@ dsh plugin --profile desktop add dsh-device-fleet@dev
 - 新增 net 测试：新 direct port 被占用时 reconfigure 失败后恢复旧 listener，net 50/50。
 - 跨主机 TLS Relay 已验证 B `relay.online=true`；清理 B relay 配置触发离线，root cause 为本修复。
 - 已正式发布 `dsh-device-fleet@1.20.7`（`latest` + `dev`，2026-11-19；离线包 `dsh-device-fleet-1.20.7.tgz`，shasum `61d09b5d235ad494883b5aefea794d72f6fc06a1`，1,200,382 bytes）。
+
+## 1.20.8（文档/CI 补丁，正式版）
+
+- 同步 README/AGENT-GUIDE、发布记录、仓库元数据（repository/homepage/bugs）。
+- 修复 `scripts/client-smoke.mjs` 硬编码本机路径与审批超时测试的 Linux CI keepalive。
+- 运行时代码同 1.20.7；npm/GitHub 同版本发布。
 - 双端 1.15.2 验证：V152-BASELINE-OK；B 重连后 A authority 稳定 epoch11（无回摆）；任务负责人 host↔B 双向修改成功、非法 owner 被拒；配置 `notifications.timeoutMs` 5100 保存并回退 5000。

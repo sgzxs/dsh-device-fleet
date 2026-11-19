@@ -1,6 +1,6 @@
 # 项目现状（唯一权威页）
 
-**版本：1.20.7（正式版，npm `latest` + `dev`）** · **更新：2026-11-19 15:10（Asia/Shanghai）** · A/B 均 1.20.7 真机验证：轨迹 30 事件（新/旧）、unowned 403、CSRF evil 403、管理工具/根外路径拒绝、`fleet_run` 正常、calls 133 条仅 A/B。配置/启动回滚由 net 单测覆盖（50/50）。npm `latest` 已切到 1.20.7。
+**版本：1.20.8（正式版，npm `latest` + `dev`）** · **更新：2026-11-19 15:35（Asia/Shanghai）** · 1.20.8 为文档/CI 补丁：同步 README/AGENT-GUIDE、仓库元数据，修复 GitHub CI 的 client-smoke 路径与审批超时测试 keepalive；运行时代码同 1.20.7。A/B 1.20.7 真机验证保留，net 50/50、host 75/75。
 
 > 部署提醒：1.17.3 A/B 必须同版本；当前 **A 已 1.17.3，B 仍 1.17.2**（待安装 1.17.3 并重载插件）。升级 A/B 时都要重载插件；只有插件管理器不可用或 bundle/profile patch 变更才需要重启 DSH。
 

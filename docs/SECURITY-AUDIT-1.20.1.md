@@ -1,4 +1,4 @@
-# 安全审计：dsh-device-fleet 1.20.1 → 1.20.7（正式版）
+# 安全审计：dsh-device-fleet 1.20.1 → 1.20.8（正式版）
 
 - **审计时间**：2026-11-19 00:00–00:25（Asia/Shanghai）
 - **范围**：`src/net`（identity/rotation/fleet-node/secure-channel/relay/discovery/tls）、`src/plugin/index.js` RPC 与工具、`src/host`（tool-policy/file-transfer/trajectory/call-ledger/approval/room/ui-web）、`client.js`、`scripts`（relay/lease/cert）
@@ -7,7 +7,7 @@
 
 ## 结论
 
-- **已作为 1.20.7 正式版发布（`latest`=1.20.7）**。发现 3 个 Critical 级问题均已关闭；HTTP CSRF、配置回滚、启动回滚也已修复。剩余是外部审计/跨主机数据面/发布签名等后续增强项，不再阻塞本次发布。
+- **已作为 1.20.8 正式版发布（`latest`=1.20.8）**。发现 3 个 Critical 级问题均已关闭；HTTP CSRF、配置回滚、启动回滚也已修复。剩余是外部审计/跨主机数据面/发布签名等后续增强项，不再阻塞本次发布。
 - 1.20.2/1.20.3/1.20.4 已修复所有能由代码单独关闭的 Critical/High：能力冒充、管理工具远程调用、allowlist 失效、grants 绕过 roots、symlink 逃逸、轨迹/calls 越权、Relay 客户端私钥外发、lease 默认无鉴权、已吊销 checkpoint 签名计数、Agent 自审批。
 - 仍需：安全审计复验、真实跨主机 Relay/TLS、HTTP UI 的 Origin/CSRF 加固、发布签名。
 

@@ -1,8 +1,8 @@
 # 新 Session 交接文档
 
 **交接时间：2026-11-17 15:00（Asia/Shanghai）**  
-**项目：dsh-device-fleet 1.20.7（正式版，npm `latest`）**  
-**一句话：1.20.7 已正式发布（latest=dev=1.20.7）；A/B 真机轨迹/权限/CSRF 通过，配置回滚单测通过。**
+**项目：dsh-device-fleet 1.20.8（正式版，npm `latest`）**  
+**一句话：1.20.8 同步文档/仓库元数据并修复 GitHub CI；运行时代码同 1.20.7，A/B 仍在 1.20.7。**
 
 ---
 

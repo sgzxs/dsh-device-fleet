@@ -7,7 +7,7 @@ DeepSeek Harness 的设备联邦插件：把登录同一账号、且都安装本
 
 ## 当前状态
 
-**1.20.7 正式版（npm `latest` / `dev` 均为 1.20.7）**：内部安全审计修复（审批仅 UI、CSRF 同源、权限/roots/轨迹/Relay 私钥/lease/checkpoint），以及 1.20.6/1.20.7 的配置与启动失败回滚。功能面见下。
+**1.20.8 正式版（npm `latest` / `dev`）**：1.20.7 的运行时代码不变；本补丁同步 README/AGENT-GUIDE、仓库元数据，并修复 GitHub CI 的 client-smoke 绝对路径与审批超时测试 keepalive。安全修复与功能面同 1.20.7。
 
 功能面：Fleet 配对/直连/发现/Relay（TLS/mTLS/多候选/证书热轮换/lease 选主）、直调/委派/审批（once/ttl/room/task，持久化）、Room 与镜像、密钥轮换/吊销/分叉/链分页/checkpoint M-of-N、一次性邀请、通知 webhook、2 GiB 流式文件传输（上传/下载续传）、跨设备调用详情与持久化 DSH 轨迹、离线 outbox、主题/中英切换。
 
@@ -15,14 +15,14 @@ DeepSeek Harness 的设备联邦插件：把登录同一账号、且都安装本
 
 ## 安装
 
-已正式发布到 npm：**`dsh-device-fleet@1.20.7`（`latest` 与 `dev` 均指向 1.20.7）**。离线包 **`dsh-device-fleet-1.20.7.tgz`** 也在本目录。
+已正式发布到 npm：**`dsh-device-fleet@1.20.8`（`latest` 与 `dev` 均指向 1.20.8）**。离线包 **`dsh-device-fleet-1.20.8.tgz`** 也在本目录。
 
 ```sh
 # npm 安装（A/B 两端必须同一版本）
-dsh plugin --profile web add dsh-device-fleet@1.20.7
+dsh plugin --profile web add dsh-device-fleet@1.20.8
 
 # 或从本目录/离线包安装（版本可控）
-dsh plugin --profile desktop add C:/path/to/dsh-device-fleet-1.20.7.tgz
+dsh plugin --profile desktop add C:/path/to/dsh-device-fleet-1.20.8.tgz
 ```
 
 两台设备的**插件版本必须一致**；DSH 需同一发布线（允许 prerelease 后缀不同，ADR-0024）。不一致会在握手时直接拒绝。
@@ -192,7 +192,7 @@ node scripts/ci.mjs           # net / host / overlay / perf + client smoke 全�
 node test/net.test.mjs        # 仅网络层（含 TLS Relay 与证书夹具）
 ```
 
-当前基线（2026-11-19，1.20.7）：net 50/50、host 75/75、overlay 2/2、plugin-order 1/1、perf 1/1、client smoke passed。真机 A/B 1.20.7：轨迹 30 事件（新/旧）、unowned 403、CSRF evil 403、管理工具/根外路径拒绝、`fleet_run` 正常、calls 133 条。
+当前基线（2026-11-19，1.20.8）：net 50/50、host 75/75、overlay 2/2、plugin-order 1/1、perf 1/1、client smoke passed。真机 A/B 1.20.7：轨迹 30 事件（新/旧）、unowned 403、CSRF evil 403、管理工具/根外路径拒绝、`fleet_run` 正常、calls 133 条。
 
 ## 安全说明
 
